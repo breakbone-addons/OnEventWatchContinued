@@ -1,0 +1,11 @@
+## Interface: 20505
+## Title: OnEventWatch (Continued)
+## Notes: Estimates OnEvent processing time by frame. Updated for BCC.
+## Author: Breakbone - Dreamscythe (original by Gello)
+## Version: 1.3.0
+## X-License: Public Domain
+## X-Original-Author: Gello
+## SavedVariables: OnEventWatch_Settings
+MyMinimapButton.lua
+OnEventWatch.xml
+OnEventWatch.lua
