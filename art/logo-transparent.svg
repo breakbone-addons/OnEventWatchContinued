@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="55 25 290 360" width="290" height="360">
+  <defs>
+    <linearGradient id="shieldGold3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c0a050"/>
+      <stop offset="100%" stop-color="#8a6e30"/>
+    </linearGradient>
+    <linearGradient id="shieldInner3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2a3a"/>
+      <stop offset="100%" stop-color="#1a1a28"/>
+    </linearGradient>
+    <clipPath id="lensClip3">
+      <circle cx="190" cy="140" r="48"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shield -->
+  <path d="M200,40 L330,100 L330,220 Q330,310 200,370 Q70,310 70,220 L70,100 Z" fill="url(#shieldGold3)"/>
+  <path d="M200,55 L318,110 L318,218 Q318,300 200,355 Q82,300 82,218 L82,110 Z" fill="url(#shieldInner3)"/>
+
+  <!-- Event log lines (subtle background) -->
+  <g opacity="0.25">
+    <rect x="110" y="85" width="180" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="100" width="155" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="115" width="170" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="130" width="145" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="145" width="175" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="160" width="160" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="175" width="150" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="190" width="165" height="2" rx="1" fill="#c0a050"/>
+    <rect x="110" y="205" width="140" height="2" rx="1" fill="#c0a050"/>
+  </g>
+
+  <!-- Magnifying glass — single cohesive piece, uniform #c0a050
+       Circle center: (190, 140), outer radius 54
+       Handle at 45°: attachment (228, 178), extends along (0.707, 0.707) -->
+  <g>
+    <!-- Handle: 12px wide rect along the 45° radial, drawn under ring so they merge -->
+    <!-- Perpendicular to tangent at attachment = along radius = 45° -->
+    <!-- Left edge offset: (-sin45°, cos45°) * 6 = (-4.24, 4.24) -->
+    <!-- Right edge offset: (sin45°, -cos45°) * 6 = (4.24, -4.24) -->
+    <path d="M223.8,182.2 L232.2,173.8 L270.4,212 Q273,215 270,218 L267,218 L226,180 Z" fill="#c0a050"/>
+    <!-- Grip lines perpendicular to handle (perpendicular to 45° = 135°) -->
+    <line x1="252" y1="206" x2="260" y2="198" stroke="#8a6e30" stroke-width="1.2" opacity="0.5"/>
+    <line x1="256" y1="210" x2="264" y2="202" stroke="#8a6e30" stroke-width="1.2" opacity="0.5"/>
+
+    <!-- Outer ring (drawn on top to cleanly overlap the handle root) -->
+    <circle cx="190" cy="140" r="54" fill="#c0a050"/>
+    <!-- Inner cutout (lens hole) -->
+    <circle cx="190" cy="140" r="48" fill="#1a1a28"/>
+  </g>
+
+  <!-- Magnified content inside lens -->
+  <g clip-path="url(#lensClip3)">
+    <rect x="153" y="110" width="55" height="3" rx="1" fill="#d4b860" opacity="0.85"/>
+    <rect x="215" y="110" width="20" height="3" rx="1" fill="#d4b860" opacity="0.55"/>
+
+    <rect x="153" y="124" width="42" height="3" rx="1" fill="#d4b860" opacity="0.85"/>
+    <rect x="201" y="124" width="28" height="3" rx="1" fill="#d4b860" opacity="0.55"/>
+
+    <rect x="153" y="138" width="50" height="3" rx="1" fill="#d4b860" opacity="0.85"/>
+    <rect x="209" y="138" width="22" height="3" rx="1" fill="#d4b860" opacity="0.55"/>
+
+    <rect x="153" y="152" width="38" height="3" rx="1" fill="#d4b860" opacity="0.85"/>
+    <rect x="197" y="152" width="25" height="3" rx="1" fill="#d4b860" opacity="0.55"/>
+
+    <rect x="153" y="166" width="48" height="3" rx="1" fill="#d4b860" opacity="0.85"/>
+    <rect x="207" y="166" width="18" height="3" rx="1" fill="#d4b860" opacity="0.55"/>
+  </g>
+
+  <!-- Bar chart badge (bottom-left of lens ring) -->
+  <g transform="translate(148, 182)">
+    <circle cx="0" cy="0" r="18" fill="#2a2a3a" stroke="#c0a050" stroke-width="3"/>
+    <rect x="-11" y="1" width="5" height="9" rx="1" fill="#c0a050" opacity="0.6"/>
+    <rect x="-3" y="-4" width="5" height="14" rx="1" fill="#c0a050" opacity="0.75"/>
+    <rect x="5" y="-9" width="5" height="19" rx="1" fill="#d4b860" opacity="0.9"/>
+    <line x1="-13" y1="11" x2="12" y2="11" stroke="#c0a050" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Stopwatch badge (top-right of lens ring) -->
+  <g transform="translate(232, 98)">
+    <circle cx="0" cy="0" r="18" fill="#2a2a3a" stroke="#c0a050" stroke-width="3"/>
+    <!-- Button top -->
+    <rect x="-2.5" y="-22" width="5" height="5" rx="1.5" fill="#c0a050"/>
+    <!-- Stem -->
+    <line x1="0" y1="-17" x2="0" y2="-14" stroke="#c0a050" stroke-width="2"/>
+    <!-- Tick marks -->
+    <line x1="0" y1="-12" x2="0" y2="-9" stroke="#c0a050" stroke-width="1.2"/>
+    <line x1="12" y1="0" x2="9" y2="0" stroke="#c0a050" stroke-width="1.2"/>
+    <line x1="0" y1="12" x2="0" y2="9" stroke="#c0a050" stroke-width="1.2"/>
+    <line x1="-12" y1="0" x2="-9" y2="0" stroke="#c0a050" stroke-width="1.2"/>
+    <!-- Single hand -->
+    <line x1="0" y1="0" x2="5" y2="-8" stroke="#d4b860" stroke-width="2" stroke-linecap="round"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="1.8" fill="#d4b860"/>
+  </g>
+
+  <!-- Title (inside shield) -->
+  <rect x="135" y="238" width="130" height="2.5" fill="#c0a050" rx="1"/>
+  <text x="200" y="262" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#c0a050" letter-spacing="3">ONEVENT</text>
+  <text x="200" y="285" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#c0a050" letter-spacing="3">WATCH</text>
+  <rect x="143" y="293" width="114" height="2.5" fill="#c0a050" rx="1"/>
+</svg>
