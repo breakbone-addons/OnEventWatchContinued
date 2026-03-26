@@ -1,0 +1,33 @@
+{
+  "id": "oneventwatch",
+  "name": "OnEventWatch Continued",
+  "tagline": "Addon performance profiling tool",
+  "description": "A diagnostic tool that hooks into addon OnEvent handlers to estimate processing time by frame. Originally written by Gello in 2006, updated for TBC Anniversary. Useful for identifying which addons are causing lag during heavy event traffic.",
+  "logo": "art/logo.svg",
+  "reverse": false,
+  "features": [
+    {
+      "title": "Event Profiling",
+      "description": "Hooks into every frame's OnEvent handler to estimate processing time per event type."
+    },
+    {
+      "title": "Sortable Data",
+      "description": "Sort by frame name, event, fire count, total time, or average time to find bottlenecks."
+    },
+    {
+      "title": "Search & Filter",
+      "description": "Filter results by frame or event name to zero in on specific addons."
+    },
+    {
+      "title": "Chat Export",
+      "description": "Shift-click any row to insert its stats into chat for easy sharing."
+    }
+  ],
+  "screenshots": [],
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/breakbone-addons/oneventwatchcontinued"
+    }
+  ]
+}
