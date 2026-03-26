@@ -3,7 +3,7 @@
   "name": "OnEventWatch Continued",
   "tagline": "Addon performance profiling tool",
   "description": "A diagnostic tool that hooks into addon OnEvent handlers to estimate processing time by frame. Originally written by Gello in 2006, updated for TBC Anniversary. Useful for identifying which addons are causing lag during heavy event traffic.",
-  "logo": "art/logo.svg",
+  "logo": "art/logo-transparent.svg",
   "reverse": false,
   "features": [
     {
